@@ -129,7 +129,7 @@ const akash = {
         <img src="https://img.shields.io/badge/Pinecone-000?style=flat-square&logo=pinecone&logoColor=white"/>
         <img src="https://img.shields.io/badge/Llama--3-7c3aed?style=flat-square"/>
       </p>
-      <a href="https://github.com/AKASH1922](https://skump.netlify.app/">
+      <a href=https://skump.netlify.app>
       <p><strong>🟢 LIVE</strong></p>
     </td>
     <td width="50%" valign="top">
