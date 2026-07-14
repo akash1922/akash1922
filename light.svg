@@ -2,7 +2,7 @@
   <defs>
     <clipPath id="l-main"><rect width="1180" height="610" rx="18"/></clipPath>
     <clipPath id="l-left"><rect x="0" y="0" width="450" height="610"/></clipPath>
-    <clipPath id="l-ascii-c"><rect x="10" y="10" width="430" height="580"/></clipPath>
+    <clipPath id="l-ascii-clip"><rect x="0" y="0" width="450" height="489.0"/></clipPath>
 
     <!-- BG -->
     <radialGradient id="l-bg1" cx="18%" cy="28%" r="52%">
@@ -87,14 +87,11 @@
   </defs>
 
   <g clip-path="url(#l-main)">
-
-    <!-- BACKGROUND -->
     <rect width="1180" height="610" fill="#ffffff"/>
     <rect width="1180" height="610" fill="url(#l-bg1)"/>
     <rect width="1180" height="610" fill="url(#l-bg2)"/>
     <rect width="1180" height="610" fill="url(#l-bg3)"/>
 
-    <!-- Floating particles -->
     <circle cx="90" cy="75" r="1.8" fill="#2563eb" fill-opacity="0.3" filter="url(#l-glow-sm)">
       <animate attributeName="cy" values="75;55;75" dur="7s" repeatCount="indefinite"/>
     </circle>
@@ -104,227 +101,186 @@
     <circle cx="680" cy="42" r="1.5" fill="#10b981" fill-opacity="0.35" filter="url(#l-glow-sm)">
       <animate attributeName="cy" values="42;24;42" dur="9s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="1040" cy="490" r="2" fill="#2563eb" fill-opacity="0.25" filter="url(#l-glow-sm)">
-      <animate attributeName="cy" values="490;472;490" dur="6s" repeatCount="indefinite"/>
-    </circle>
 
-    <!-- ═══ LEFT PANEL ═══ -->
+    <!-- LEFT PANEL -->
     <g clip-path="url(#l-left)">
       <rect x="0" y="0" width="450" height="610" fill="url(#l-left-bg)"/>
       <rect x="0" y="0" width="450" height="610" fill="url(#l-hack-bg)">
         <animate attributeName="fill-opacity" values="1;0.5;1" dur="3.5s" repeatCount="indefinite"/>
       </rect>
       <rect x="0" y="0" width="450" height="610" fill="url(#l-scan)" opacity="0.55"/>
-
-      <!-- Scanline sweep -->
       <rect x="0" y="-8" width="450" height="4" fill="rgba(37,99,235,0.04)">
         <animate attributeName="y" values="-8;618;-8" dur="5s" repeatCount="indefinite"/>
       </rect>
 
-      <!-- Right border -->
-      <rect x="447" y="0" width="3" height="610" fill="url(#l-border)"/>
-
       <!-- ASCII ART -->
-      <g clip-path="url(#l-ascii-c)" filter="url(#l-glow)">
-        <g>
-          <animateTransform attributeName="transform" type="translate" values="0,0;0,-5;0,0" dur="4s" repeatCount="indefinite"/>
-          <text font-family="'Courier New',monospace" font-size="9" fill="url(#l-ascii-g)" letter-spacing="0.3" xml:space="preserve">
-<tspan x="12" dy="0" y="38">&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;</tspan>
-<tspan x="12" dy="11">&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2592;&#x2592;&#x2592;&#x2592;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2592;&#x2592;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;</tspan>
-<tspan x="12" dy="11">&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2592;&#x2592;&#x2591;&#x2591; &#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591; &#x2591;&#x2592;&#x2592;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;</tspan>
-<tspan x="12" dy="11">&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2592;&#x2591;&#x2591;  &#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;  &#x2591;&#x2592;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;</tspan>
-<tspan x="12" dy="11">&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2592;&#x2591;&#x2591;  &#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;  &#x2591;&#x2592;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;</tspan>
-<tspan x="12" dy="11">&#x2593;&#x2593;&#x2593;&#x2593;&#x2592;&#x2591;  &#x2592;&#x2592;&#x2592;&#x2592;&#x2592;&#x2592;&#x2592;&#x2592;&#x2592;&#x2592;&#x2592;&#x2592;&#x2592;&#x2592;  &#x2591;&#x2592;&#x2593;&#x2593;&#x2593;&#x2593;</tspan>
-<tspan x="12" dy="11">&#x2593;&#x2593;&#x2593;&#x2592;&#x2591;  &#x2592;&#x2592;&#x2592;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2592;&#x2592;&#x2592;  &#x2591;&#x2592;&#x2593;&#x2593;&#x2593;</tspan>
-<tspan x="12" dy="11">&#x2593;&#x2593;&#x2592;&#x2591;  &#x2592;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2592;  &#x2591;&#x2592;&#x2593;&#x2593;</tspan>
-<tspan x="12" dy="11">&#x2593;&#x2593;&#x2591;  &#x2591;&#x2588;&#x2588;&#x2588;&#x2592;&#x2592;&#x2591;&#x2591;&#x2591;&#x2591;&#x2592;&#x2592;&#x2588;&#x2588;&#x2591;  &#x2591;&#x2592;&#x2593;&#x2593;</tspan>
-<tspan x="12" dy="11">&#x2593;&#x2591;  &#x2591;&#x2588;&#x2588;&#x2591;&#x2591;  &#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;  &#x2591;&#x2588;&#x2588;&#x2591;  &#x2591;&#x2592;&#x2593;</tspan>
-<tspan x="12" dy="11">&#x2593;  &#x2591;&#x2588;&#x2588;&#x2591;  &#x2588;&#x2588;&#x2588;&#x2591;&#x2591;&#x2591;&#x2591;&#x2588;&#x2588;&#x2588;  &#x2588;&#x2588;&#x2591;  &#x2591;&#x2592;&#x2593;</tspan>
-<tspan x="12" dy="11">&#x2592;  &#x2588;&#x2588;&#x2592;  &#x2588;&#x2588;&#x2593;&#x2588;&#x2591;&#x2591;&#x2591;&#x2591;&#x2588;&#x2593;&#x2588;&#x2588;  &#x2592;&#x2588;&#x2588;  &#x2591;&#x2592;&#x2593;</tspan>
-<tspan x="12" dy="11">&#x2592;  &#x2591;&#x2588;&#x2588;  &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2591;&#x2591;&#x2591;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;   &#x2588;&#x2588;&#x2591;  &#x2591;&#x2592;</tspan>
-<tspan x="12" dy="11">&#x2591;  &#x2591;&#x2588;&#x2588;  &#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;   &#x2588;&#x2588;&#x2591;  &#x2591;&#x2592;</tspan>
-<tspan x="12" dy="11">   &#x2592;&#x2588;&#x2588;  &#x2591;&#x2592;&#x2592;&#x2592;&#x2592;&#x2592;&#x2592;&#x2592;&#x2591;&#x2591;&#x2591;   &#x2588;&#x2588;&#x2592;     </tspan>
-<tspan x="12" dy="11">   &#x2592;&#x2588;&#x2588;&#x2591;  &#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;  &#x2591;&#x2588;&#x2588;&#x2592;     </tspan>
-<tspan x="12" dy="11">&#x2591;  &#x2591;&#x2588;&#x2588;&#x2588;  &#x2591;&#x2591;&#x2592;&#x2592;&#x2592;&#x2591;&#x2591;&#x2591;   &#x2588;&#x2588;&#x2588;&#x2591;  &#x2591;&#x2592;</tspan>
-<tspan x="12" dy="11">&#x2592;  &#x2591;&#x2588;&#x2588;&#x2588;&#x2588;&#x2592;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2592;&#x2588;&#x2588;&#x2588;&#x2588;&#x2591;  &#x2591;&#x2592;&#x2593;</tspan>
-<tspan x="12" dy="11">&#x2593;&#x2591;  &#x2591;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2591;  &#x2591;&#x2592;&#x2593;</tspan>
-<tspan x="12" dy="11">&#x2593;&#x2592;  &#x2591;&#x2591;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2591;&#x2591;  &#x2591;&#x2592;&#x2593;&#x2593;</tspan>
-<tspan x="12" dy="11">&#x2593;&#x2593;&#x2591;   &#x2591;&#x2592;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2592;&#x2591;   &#x2591;&#x2592;&#x2593;&#x2593;</tspan>
-<tspan x="12" dy="11">&#x2593;&#x2593;&#x2593;&#x2591;    &#x2591;&#x2592;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2592;&#x2591;    &#x2591;&#x2592;&#x2593;&#x2593;&#x2593;</tspan>
-<tspan x="12" dy="11">&#x2593;&#x2593;&#x2593;&#x2592;&#x2591;     &#x2591;&#x2592;&#x2588;&#x2588;&#x2592;&#x2591;     &#x2591;&#x2592;&#x2593;&#x2593;&#x2593;&#x2593;</tspan>
-<tspan x="12" dy="11">&#x2593;&#x2593;&#x2593;&#x2593;&#x2592;&#x2591;               &#x2591;&#x2592;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;</tspan>
-<tspan x="12" dy="11">&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2592;&#x2591;&#x2591;          &#x2591;&#x2591;&#x2592;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;</tspan>
-<tspan x="12" dy="11">&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2592;&#x2591;&#x2591; &#x2591;&#x2591;&#x2591;&#x2591;&#x2591; &#x2591;&#x2591;&#x2592;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;</tspan>
-<tspan x="12" dy="11">&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2592;&#x2591; &#x2591;&#x2592;&#x2592;&#x2592; &#x2591;&#x2592;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;</tspan>
-<tspan x="12" dy="11">&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2592;&#x2591; &#x2591;&#x2592;&#x2588;&#x2592;&#x2591; &#x2591;&#x2592;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;</tspan>
-<tspan x="12" dy="11">&#x2591;&#x2592;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2592;&#x2591; &#x2591;&#x2592;&#x2588;&#x2592;&#x2591; &#x2591;&#x2592;&#x2593;&#x2593;&#x2593;&#x2593;&#x2593;&#x2592;&#x2591;</tspan>
-<tspan x="12" dy="11">&#x2591;&#x2591;&#x2592;&#x2593;&#x2593;&#x2593;&#x2593;&#x2592;&#x2591; &#x2591;&#x2592;&#x2588;&#x2592;&#x2591; &#x2591;&#x2592;&#x2593;&#x2593;&#x2593;&#x2593;&#x2592;&#x2591;&#x2591;</tspan>
-          </text>
-
-          <!-- Blinking cursor -->
-          <text x="12" y="408" font-family="'Courier New',monospace" font-size="11" fill="#2563eb">
-            <animate attributeName="opacity" values="1;0;1" dur="0.85s" repeatCount="indefinite"/>
-            &#x2588;
-          </text>
-
-          <!-- Name -->
-          <text x="225" y="446" text-anchor="middle" font-family="'Courier New',monospace" font-size="24" font-weight="700" fill="url(#l-ascii-g)" letter-spacing="10" filter="url(#l-glow)">AKASH</text>
-          <text x="225" y="466" text-anchor="middle" font-family="'Courier New',monospace" font-size="8.5" fill="#2563eb" letter-spacing="2">[ MCA &#183; AI ENGINEER &#183; FULL STACK ]</text>
-        </g>
+      <g clip-path="url(#l-ascii-clip)">
+    <text x="10.0" y="36.0" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&amp;#######&amp;&amp;@@@@@!,--------<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.0000s" fill="freeze"/></text>
+    <text x="10.0" y="47.2" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;@!,--------<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.0375s" fill="freeze"/></text>
+    <text x="10.0" y="58.4" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;@@?---------<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.0750s" fill="freeze"/></text>
+    <text x="10.0" y="69.6" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&amp;&amp;@@@@@@@@@@@&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;@@;---------<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.1125s" fill="freeze"/></text>
+    <text x="10.0" y="80.8" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">@@@@@@@@@@@@@@@@@@@@@@@@@@&amp;@@@@@@@@@@@@@&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;@@;---------<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.1500s" fill="freeze"/></text>
+    <text x="10.0" y="92.0" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;@@##&amp;@&amp;&amp;@@@@@@@&amp;@@@@@@@&amp;&amp;&amp;&amp;&amp;@@@@@@@&amp;&amp;&amp;@@@@@@;---------<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.1875s" fill="freeze"/></text>
+    <text x="10.0" y="103.2" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">@@@@@@@@@@@@@@@@@@@@@@@@@&amp;$*?::?*@@@@@@@@@@@@@@@@@@@@@@@@@;---------<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.2250s" fill="freeze"/></text>
+    <text x="10.0" y="114.4" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">@@@@@@@@@@@@@@@@@@@@@@@@&amp;:.,,-,,-#@@@@@@@@@@@@@@@@@@@@@@@@;---------<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.2625s" fill="freeze"/></text>
+    <text x="10.0" y="125.6" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">@@@@@@@@@@@@@@@@@@@@@@@@+!++;!%%=?#@@@@@@@@@@@@@@@@@@@@@@@:---------<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.3000s" fill="freeze"/></text>
+    <text x="10.0" y="136.8" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">@@@@@@@@@@@@@@@@@@@@@@@*!%#$:;==?-?$%@@@@@@@@@@@@@@@@@@@@&amp;:---------<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.3375s" fill="freeze"/></text>
+    <text x="10.0" y="148.0" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">@@@@@@@@@@@@@@@@@@@@@@%?----::-,--:!*@@@@@@@@@@@@@@@@@@@@&amp;:---------<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.3750s" fill="freeze"/></text>
+    <text x="10.0" y="159.2" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">@@@@@@@@@@@@@@@@@@@@@@%=---;$*=::,;*&amp;@@@@@@@@@@@@@@@@@@@@&amp;:---------<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.4125s" fill="freeze"/></text>
+    <text x="10.0" y="170.4" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">@@@@@@@@@@@@@@@@@@@@@@@#=-;++*==?:*@@@@@@@@@@@@@@@@@@@@@@%----------<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.4500s" fill="freeze"/></text>
+    <text x="10.0" y="181.6" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">@@@@@@@@@@@@@@@@@@@@@@@@@%+?;+!:?#@@@@@@@@@@@@@@@@@@@@@@@!----------<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.4875s" fill="freeze"/></text>
+    <text x="10.0" y="192.8" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">@@@@@@@@@@@@@@@@@@@@@@@@@#@##@@&amp;@$%@@@@@@@@@@@@@@@@@@@@@=-----------<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.5250s" fill="freeze"/></text>
+    <text x="10.0" y="204.0" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">@@@@@@@@@@@@@@@@@@@@@@@@@!=%&amp;@&amp;$=:$@@@@@&amp;@@@@@@@@@@@@&amp;*;,-----------<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.5625s" fill="freeze"/></text>
+    <text x="10.0" y="215.2" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">@@@@@@@@@@@&amp;@&amp;&amp;##@@&amp;@@&amp;@@=:;!+=?;;%@@@@@@&amp;#$*++**+=!?:,-------------<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.6000s" fill="freeze"/></text>
+    <text x="10.0" y="226.4" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">??;;;;;;;;:::?+$#@@@@@@@%:-::;;::-?&amp;@@@@@@@&amp;%*;,--------------------<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.6375s" fill="freeze"/></text>
+    <text x="10.0" y="237.6" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">------------=&amp;@@@@@@@@@@&amp;+;------?$@@@@&amp;@@@@@@@+-:::----------------<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.6750s" fill="freeze"/></text>
+    <text x="10.0" y="248.8" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">----------:%@@@&amp;@@@@@@@@@@&amp;$?:-?$@@&amp;&amp;@&amp;@@@@@@@@@*-------------------<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.7125s" fill="freeze"/></text>
+    <text x="10.0" y="260.0" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">----------#@@@@@@@@@@@&amp;@@@&amp;&amp;@#%&amp;@##&amp;&amp;@&amp;@@@@@@@@@@;-:-----------:::--<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.7500s" fill="freeze"/></text>
+    <text x="10.0" y="271.2" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">:::::-::-!@@@@@@@@@@@@@@@@&amp;##&amp;&amp;&amp;#&amp;&amp;&amp;@@@@@@@@@@@@@*-:::::::::::::::::<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.7875s" fill="freeze"/></text>
+    <text x="10.0" y="282.4" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">::-------#@@@@@@@@@@@@@@@@&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;@@@@&amp;&amp;###@@@@@@!:::;;::::::::;;;;<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.8250s" fill="freeze"/></text>
+    <text x="10.0" y="293.6" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">:::::::-;@@@@@@@@@@@@@@@@@&amp;&amp;&amp;#####@@@%**$%#&amp;@@@@@@%:;;;:;;:;?:;;:;;;<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.8625s" fill="freeze"/></text>
+    <text x="10.0" y="304.8" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">;;;;;;;:%@@@@@@@@@@@@@@@@@@@&amp;####&amp;@@@&amp;&amp;@@@@@@@@@@@@$:;:-;??;:;;;--:;<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.9000s" fill="freeze"/></text>
+    <text x="10.0" y="316.0" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">:::::::+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@$::-:!!;;=,?!?:-:<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.9375s" fill="freeze"/></text>
+    <text x="10.0" y="327.2" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">-::::::!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%;:-!;=?!*:!!:?--<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="0.9750s" fill="freeze"/></text>
+    <text x="10.0" y="338.4" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">-:;:::;#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&amp;?::!:=+=*!+=;?;:<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="1.0125s" fill="freeze"/></text>
+    <text x="10.0" y="349.6" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">::;;;;?&amp;@@@@@@@@@@@@@@@@@@&amp;&amp;&amp;&amp;&amp;@@@@@@@@@@@@@@@@@@@@@!:!;!?;!!??!!;;:<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="1.0500s" fill="freeze"/></text>
+    <text x="10.0" y="360.8" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">;:;;;;!@@@@@@@@@@@@@@@@@@@@&amp;&amp;@@@&amp;@@@@@@@@@@@@@@@@@@@#?;:;!?;;;??;;;;<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="1.0875s" fill="freeze"/></text>
+    <text x="10.0" y="372.0" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">;;;;?;=@@@@@@@@@@@@@@@@@&amp;#########&amp;@@@@@@@@@@&amp;&amp;@@@@@@=?;;;;??;;;;;;;<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="1.1250s" fill="freeze"/></text>
+    <text x="10.0" y="383.2" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">;?????=@@@@@@@@@@&amp;@&amp;@@@@&amp;&amp;&amp;####&amp;&amp;&amp;@@@@@@@@&amp;&amp;&amp;&amp;&amp;@@@@@#?????;;;;;;;?;;<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="1.1625s" fill="freeze"/></text>
+    <text x="10.0" y="394.4" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">???????#@@@@@@@@@@&amp;@@@@@@@@&amp;&amp;&amp;&amp;&amp;@@@@@@@@&amp;&amp;&amp;@@@@@@@@@+!!!!!!!???????!<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="1.2000s" fill="freeze"/></text>
+    <text x="10.0" y="405.6" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">??!=+*++$&amp;@@@@@@@@@@@@@@@&amp;@@&amp;&amp;%**+===+$@@@@@@@@@@@@*+++=============<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="1.2375s" fill="freeze"/></text>
+    <text x="10.0" y="416.8" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">=$&amp;@@@@@&amp;&amp;@@@@@@@@@@@@@&amp;!:;!!=!!:,,,,,,!@@@@@@@@@@@+=+============!!<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="1.2750s" fill="freeze"/></text>
+    <text x="10.0" y="428.0" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">&amp;@@@@@@@@@@@@@@@@@@@@@@?,----:;?::-::--,%@@@@@@@@@@&amp;!==!!!!!!!!?????<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="1.3125s" fill="freeze"/></text>
+    <text x="10.0" y="439.2" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">@@@@@@@@@@@@@@@@@@@@@@$,---:::??;:::;;-;&amp;@@@@@@@@@@@$?!???????;;;;;;<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="1.3500s" fill="freeze"/></text>
+    <text x="10.0" y="450.4" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">@@@@@@@@@@@@@@@@@@@@&amp;&amp;&amp;*?;=!==?!=;;?+%%@@@@@@@@@@@@@&amp;;;;;;;;;:::::::<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="1.3875s" fill="freeze"/></text>
+    <text x="10.0" y="461.6" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">@@@@@@@@@@@@@@@@@@@@@@@@@&amp;%%***+*%#&amp;@@@@@@@@@@@@@@@@@;::::::::::----<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="1.4250s" fill="freeze"/></text>
+    <text x="10.0" y="472.8" font-family="'Courier New',Courier,monospace" font-size="8.6" fill="url(#l-ascii-g)" letter-spacing="0.25" opacity="0" xml:space="preserve">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#&amp;@&amp;@@@@@@&amp;@@@@@@@@@@@#;;;;;::::::::::<animate attributeName="opacity" from="0" to="1" dur="0.06s" begin="1.4625s" fill="freeze"/></text>
       </g>
 
-      <!-- Terminal prompts -->
-      <text x="12" y="492" font-family="'Courier New',monospace" font-size="8.5" fill="#2563eb" opacity="0.7">
+      <!-- CMD cursor -->
+      
+    <!-- CMD cursor block — jumps line-by-line during build -->
+    <rect x="9.0" y="27.0" width="4.5" height="10.2" fill="#2563eb">
+      <animate attributeName="y"
+               calcMode="discrete"
+               keyTimes="0.0000;0.0250;0.0500;0.0750;0.1000;0.1250;0.1500;0.1750;0.2000;0.2250;0.2500;0.2750;0.3000;0.3250;0.3500;0.3750;0.4000;0.4250;0.4500;0.4750;0.5000;0.5250;0.5500;0.5750;0.6000;0.6250;0.6500;0.6750;0.7000;0.7250;0.7500;0.7750;0.8000;0.8250;0.8500;0.8750;0.9000;0.9250;0.9500;0.9750;1.0000"
+               values="27.0;38.2;49.4;60.6;71.8;83.0;94.2;105.4;116.6;127.8;139.0;150.2;161.4;172.6;183.8;195.0;206.2;217.4;228.6;239.8;251.0;262.2;273.4;284.6;295.8;307.0;318.2;329.4;340.6;351.8;363.0;374.2;385.4;396.6;407.8;419.0;430.2;441.4;452.6;463.8;475.0"
+               dur="1.5s" begin="0.05s" fill="freeze"/>
+      <animate attributeName="opacity"
+               values="1;1;0" keyTimes="0;0.96;1"
+               dur="1.5s" begin="0.05s" fill="freeze"/>
+    </rect>
+    <!-- Fast cyan scan-line glow behind cursor -->
+    <rect x="0" y="27.0" width="450" height="2" fill="#0ea5e9" opacity="0.2">
+      <animate attributeName="y"
+               calcMode="discrete"
+               keyTimes="0.0000;0.0250;0.0500;0.0750;0.1000;0.1250;0.1500;0.1750;0.2000;0.2250;0.2500;0.2750;0.3000;0.3250;0.3500;0.3750;0.4000;0.4250;0.4500;0.4750;0.5000;0.5250;0.5500;0.5750;0.6000;0.6250;0.6500;0.6750;0.7000;0.7250;0.7500;0.7750;0.8000;0.8250;0.8500;0.8750;0.9000;0.9250;0.9500;0.9750;1.0000"
+               values="27.0;38.2;49.4;60.6;71.8;83.0;94.2;105.4;116.6;127.8;139.0;150.2;161.4;172.6;183.8;195.0;206.2;217.4;228.6;239.8;251.0;262.2;273.4;284.6;295.8;307.0;318.2;329.4;340.6;351.8;363.0;374.2;385.4;396.6;407.8;419.0;430.2;441.4;452.6;463.8;475.0"
+               dur="1.5s" begin="0.05s" fill="freeze"/>
+      <animate attributeName="opacity"
+               values="0.20;0.20;0" keyTimes="0;0.96;1"
+               dur="1.5s" begin="0.05s" fill="freeze"/>
+    </rect>
+
+      <rect x="447" y="0" width="3" height="610" fill="url(#l-border)"/>
+
+      <text x="225" y="508"
+            text-anchor="middle" font-family="'Courier New',Courier,monospace"
+            font-size="23" font-weight="700" fill="url(#l-title)" letter-spacing="10"
+            filter="url(#l-glow)">AKASH</text>
+
+      <text x="225" y="527"
+            text-anchor="middle" font-family="'Courier New',Courier,monospace"
+            font-size="8.5" fill="#2563eb" letter-spacing="2">[ MCA &#183; AI ENGINEER &#183; FULL STACK ]</text>
+
+      <text x="8" y="548"
+            font-family="'Courier New',monospace" font-size="8" fill="#2563eb" opacity="0.7">
         <tspan>root@akash:~$ </tspan><tspan fill="#475569">cat profile.sh</tspan>
       </text>
-      <text x="12" y="508" font-family="'Courier New',monospace" font-size="8" fill="#059669" opacity="0.5">executing... [####################] 100%</text>
-      <text x="12" y="524" font-family="'Courier New',monospace" font-size="8" fill="#0891b2" opacity="0.6">&gt; profile loaded &#x2713;</text>
-      <text x="12" y="540" font-family="'Courier New',monospace" font-size="8" fill="#059669" opacity="0.5">&gt; status: OPEN TO OPPORTUNITIES</text>
+      <text x="8" y="562"
+            font-family="'Courier New',monospace" font-size="7.5" fill="#059669" opacity="0.5">
+        &gt; executing... [####################] 100%
+      </text>
+      <text x="8" y="576"
+            font-family="'Courier New',monospace" font-size="7.5" fill="#0891b2" opacity="0.6">
+        &gt; status: OPEN TO OPPORTUNITIES
+      </text>
+
+      <text x="8" y="544"
+            font-family="'Courier New',monospace" font-size="10" fill="#2563eb">
+        <animate attributeName="opacity" values="1;0;1" dur="0.85s" repeatCount="indefinite"/>
+        &#x2588;
+      </text>
     </g>
 
-    <!-- Divider -->
     <line x1="454" y1="18" x2="454" y2="592" stroke="url(#l-border)" stroke-width="1.5"/>
 
-    <!-- ═══ RIGHT PANEL ═══ -->
+    <!-- RIGHT PANEL -->
     <g filter="url(#l-shadow)">
       <rect x="460" y="14" width="708" height="582" rx="14" fill="url(#l-panel)"/>
-
-      <!-- Top bar -->
       <rect x="460" y="14" width="708" height="38" rx="14" fill="#f1f5f9"/>
       <rect x="460" y="38" width="708" height="14" fill="#f1f5f9"/>
       <circle cx="484" cy="33" r="5.5" fill="#ff5f57"/>
       <circle cx="502" cy="33" r="5.5" fill="#febc2e"/>
       <circle cx="520" cy="33" r="5.5" fill="#28c840"/>
-      <text x="636" y="37" font-family="'Courier New',monospace" font-size="9.5" fill="#94a3b8" text-anchor="middle">akash@portfolio  ~  profile.sh</text>
-
-      <!-- Top shimmer line -->
+      <text x="636" y="37" font-family="'Courier New',monospace" font-size="9.5"
+            fill="#94a3b8" text-anchor="middle">akash@portfolio  ~  profile.sh</text>
       <rect x="460" y="52" width="708" height="1" fill="url(#l-border)" opacity="0.5"/>
+      <rect x="460" y="14" width="708" height="582" rx="14" fill="none"
+            stroke="url(#l-border)" stroke-width="1.2"/>
 
-      <!-- Outer border -->
-      <rect x="460" y="14" width="708" height="582" rx="14" fill="none" stroke="url(#l-border)" stroke-width="1.2"/>
-
-      <!-- ════ CONTENT — ALL VISIBLE ════ -->
-
-      <!-- WHOAMI PROMPT -->
       <text x="482" y="80" font-family="'Courier New',monospace" font-size="11">
         <tspan fill="#2563eb">$</tspan><tspan fill="#475569"> whoami</tspan>
       </text>
-
-      <!-- HI I'M AKASH -->
       <text x="482" y="108" font-family="'Inter','Segoe UI',Arial,sans-serif" font-size="26" font-weight="800">
-        <tspan fill="#0f172a">Hi </tspan><tspan fill="#2563eb">&#x1F44B;</tspan><tspan fill="#0f172a"> I'm </tspan><tspan fill="url(#l-title)" filter="url(#l-glow-sm)">AKASH</tspan>
+        <tspan fill="#0f172a">Hi &#x1F44B; I'm </tspan><tspan fill="url(#l-title)" filter="url(#l-glow-sm)">AKASH</tspan>
       </text>
 
-      <!-- Animated role -->
       <text x="482" y="132" font-family="'Courier New',monospace" font-size="12.5">
         <tspan fill="#2563eb">&gt; </tspan>
-        <tspan fill="#0891b2" opacity="1">
-          <animate attributeName="opacity" values="1;1;0;0;0;0;0;0;1" keyTimes="0;0.18;0.20;0.38;0.40;0.58;0.78;0.98;1" dur="14s" repeatCount="indefinite"/>
-          Full Stack Developer_
-        </tspan>
-        <tspan fill="#0891b2" opacity="0">
-          <animate attributeName="opacity" values="0;0;1;1;0;0;0;0;0" keyTimes="0;0.18;0.21;0.37;0.39;0.58;0.78;0.98;1" dur="14s" repeatCount="indefinite"/>
-          AI / ML Engineer_
-        </tspan>
-        <tspan fill="#0891b2" opacity="0">
-          <animate attributeName="opacity" values="0;0;0;0;1;1;0;0;0" keyTimes="0;0.18;0.22;0.38;0.40;0.57;0.59;0.78;1" dur="14s" repeatCount="indefinite"/>
-          Computer Vision Dev_
-        </tspan>
-        <tspan fill="#0891b2" opacity="0">
-          <animate attributeName="opacity" values="0;0;0;0;0;0;1;1;0" keyTimes="0;0.18;0.22;0.38;0.58;0.59;0.60;0.97;0.99" dur="14s" repeatCount="indefinite"/>
-          Open Source Builder_
-        </tspan>
+        <tspan fill="#0891b2" opacity="1"><animate attributeName="opacity" values="1;1;0;0;0;0;0;0;1" keyTimes="0;0.18;0.20;0.38;0.40;0.58;0.78;0.98;1" dur="14s" repeatCount="indefinite"/>Full Stack Developer_</tspan>
+        <tspan fill="#0891b2" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0;0;0;0" keyTimes="0;0.18;0.21;0.37;0.39;0.58;0.78;0.98;1" dur="14s" repeatCount="indefinite"/>AI / ML Engineer_</tspan>
+        <tspan fill="#0891b2" opacity="0"><animate attributeName="opacity" values="0;0;0;0;1;1;0;0;0" keyTimes="0;0.18;0.22;0.38;0.40;0.57;0.59;0.78;1" dur="14s" repeatCount="indefinite"/>Computer Vision Dev_</tspan>
+        <tspan fill="#0891b2" opacity="0"><animate attributeName="opacity" values="0;0;0;0;0;0;1;1;0" keyTimes="0;0.18;0.22;0.38;0.58;0.59;0.60;0.97;0.99" dur="14s" repeatCount="indefinite"/>Open Source Builder_</tspan>
       </text>
 
-      <!-- Separator -->
       <line x1="482" y1="145" x2="1152" y2="145" stroke="rgba(37,99,235,0.12)" stroke-width="1"/>
-
-      <!-- Box top -->
       <text x="482" y="163" font-family="'Courier New',monospace" font-size="10" fill="#2563eb" opacity="0.5">&#x250C;&#x2500; profile.json &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;</text>
 
-      <!-- KEY:VALUE rows -->
-      <text x="495" y="181" font-family="'Courier New',monospace" font-size="11">
-        <tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#0891b2">  name       </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#0f172a">  Akash</tspan>
-      </text>
-      <text x="495" y="197" font-family="'Courier New',monospace" font-size="11">
-        <tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#0891b2">  role       </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#0f172a">  Full Stack Dev  &#183;  AI Engineer  &#183;  CV Specialist</tspan>
-      </text>
-      <text x="495" y="213" font-family="'Courier New',monospace" font-size="11">
-        <tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#0891b2">  location   </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#475569">  Dwarka, New Delhi, India &#x1F1EE;&#x1F1F3;</tspan>
-      </text>
-      <text x="495" y="229" font-family="'Courier New',monospace" font-size="11">
-        <tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#0891b2">  education  </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#475569">  MCA @ GD Goenka University  &#183;  SGPA: 8.8</tspan>
-      </text>
-      <text x="495" y="245" font-family="'Courier New',monospace" font-size="11">
-        <tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#0891b2">  status     </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#059669">  Building &#183; Learning &#183; Creating  </tspan>
-        <tspan fill="#059669" font-size="9">&#x25CF; OPEN TO HIRE</tspan>
-      </text>
-      <text x="495" y="261" font-family="'Courier New',monospace" font-size="11">
-        <tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#0891b2">  work       </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#475569">  Web Dev @ Raima Youth Foundation  (May 2025 – Present)</tspan>
-      </text>
-      <text x="495" y="277" font-family="'Courier New',monospace" font-size="11">
-        <tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#0891b2">  email      </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#475569">  amanthesillent@gmail.com</tspan>
-      </text>
+      <text x="495" y="181" font-family="'Courier New',monospace" font-size="11"><tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#0891b2">  name       </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#0f172a">  Akash</tspan></text>
+      <text x="495" y="197" font-family="'Courier New',monospace" font-size="11"><tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#0891b2">  role       </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#0f172a">  Full Stack Dev  &#183;  AI Engineer  &#183;  CV Specialist</tspan></text>
+      <text x="495" y="213" font-family="'Courier New',monospace" font-size="11"><tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#0891b2">  location   </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#475569">  Dwarka, New Delhi, India &#x1F1EE;&#x1F1F3;</tspan></text>
+      <text x="495" y="229" font-family="'Courier New',monospace" font-size="11"><tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#0891b2">  education  </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#475569">  MCA @ GD Goenka University  &#183;  SGPA: 8.8</tspan></text>
+      <text x="495" y="245" font-family="'Courier New',monospace" font-size="11"><tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#0891b2">  status     </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#059669">  Building &#183; Learning &#183; Creating  </tspan><tspan fill="#059669" font-size="9">&#x25CF; OPEN TO HIRE</tspan></text>
+      <text x="495" y="261" font-family="'Courier New',monospace" font-size="11"><tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#0891b2">  work       </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#475569">  Web Dev @ Raima Youth Foundation (May 2025-Present)</tspan></text>
+      <text x="495" y="277" font-family="'Courier New',monospace" font-size="11"><tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#0891b2">  email      </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#475569">  amanthesillent@gmail.com</tspan></text>
 
-      <!-- Section sep -->
       <text x="495" y="292" font-family="'Courier New',monospace" font-size="10" fill="#2563eb" opacity="0.3">&#x251C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2524;</text>
 
-      <!-- TECH STACK -->
-      <text x="495" y="309" font-family="'Courier New',monospace" font-size="11">
-        <tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#2563eb">  core.lang     </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#0f172a">  Python,  JavaScript</tspan>
-      </text>
-      <text x="495" y="325" font-family="'Courier New',monospace" font-size="11">
-        <tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#2563eb">  core.frontend  </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#0f172a">  React,  React Native,  HTML5,  CSS3,  Bootstrap</tspan>
-      </text>
-      <text x="495" y="341" font-family="'Courier New',monospace" font-size="11">
-        <tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#2563eb">  core.backend   </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#0f172a">  FastAPI,  Node.js,  Firebase,  REST APIs</tspan>
-      </text>
-      <text x="495" y="357" font-family="'Courier New',monospace" font-size="11">
-        <tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#2563eb">  core.database  </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#0f172a">  MongoDB,  MySQL,  Firebase,  Pinecone (Vector DB)</tspan>
-      </text>
-      <text x="495" y="373" font-family="'Courier New',monospace" font-size="11">
-        <tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#2563eb">  core.ai        </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#0f172a">  OpenCV,  MediaPipe,  HuggingFace,  Groq/Llama-3,  RAG</tspan>
-      </text>
-      <text x="495" y="389" font-family="'Courier New',monospace" font-size="11">
-        <tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#2563eb">  core.infra     </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#0f172a">  AWS,  Vercel,  Render,  Netlify,  Expo,  Git</tspan>
-      </text>
+      <text x="495" y="309" font-family="'Courier New',monospace" font-size="11"><tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#2563eb">  core.lang     </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#0f172a">  Python,  JavaScript</tspan></text>
+      <text x="495" y="325" font-family="'Courier New',monospace" font-size="11"><tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#2563eb">  core.frontend  </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#0f172a">  React,  React Native,  HTML5,  CSS3</tspan></text>
+      <text x="495" y="341" font-family="'Courier New',monospace" font-size="11"><tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#2563eb">  core.backend   </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#0f172a">  FastAPI,  Node.js,  Firebase,  REST APIs</tspan></text>
+      <text x="495" y="357" font-family="'Courier New',monospace" font-size="11"><tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#2563eb">  core.database  </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#0f172a">  MongoDB,  MySQL,  Pinecone (Vector DB)</tspan></text>
+      <text x="495" y="373" font-family="'Courier New',monospace" font-size="11"><tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#2563eb">  core.ai        </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#0f172a">  OpenCV,  MediaPipe,  HuggingFace,  Llama-3,  RAG</tspan></text>
+      <text x="495" y="389" font-family="'Courier New',monospace" font-size="11"><tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#2563eb">  core.infra     </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#0f172a">  AWS,  Vercel,  Render,  Expo,  Git</tspan></text>
 
-      <!-- Section sep -->
       <text x="495" y="404" font-family="'Courier New',monospace" font-size="10" fill="#2563eb" opacity="0.3">&#x251C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2524;</text>
 
-      <!-- CONTACT + PROJECTS -->
-      <text x="495" y="421" font-family="'Courier New',monospace" font-size="11">
-        <tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#059669">  contact.github   </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#475569">  github.com/AKASH1922</tspan>
-      </text>
-      <text x="495" y="437" font-family="'Courier New',monospace" font-size="11">
-        <tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#059669">  contact.mail     </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#475569">  amanthesillent@gmail.com</tspan>
-      </text>
-      <text x="495" y="453" font-family="'Courier New',monospace" font-size="11">
-        <tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#059669">  project[0]       </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#0f172a">  GuruTutor AI  </tspan><tspan fill="#94a3b8">&#x2014;</tspan><tspan fill="#475569">  RAG Tutoring  (FastAPI · Pinecone · Llama-3)</tspan>
-      </text>
-      <text x="495" y="469" font-family="'Courier New',monospace" font-size="11">
-        <tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#059669">  project[1]       </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#0f172a">  Face Recognition  </tspan><tspan fill="#94a3b8">&#x2014;</tspan><tspan fill="#475569">  Attendance System  (OpenCV · Firebase)</tspan>
-      </text>
-      <text x="495" y="485" font-family="'Courier New',monospace" font-size="11">
-        <tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#059669">  project[2]       </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#0f172a">  Apollo Music  </tspan><tspan fill="#94a3b8">&#x2014;</tspan><tspan fill="#475569">  Mobile Streaming  (React Native · AWS)</tspan>
-      </text>
-      <text x="495" y="501" font-family="'Courier New',monospace" font-size="11">
-        <tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#059669">  project[3]       </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#0f172a">  Teach-AIR  </tspan><tspan fill="#94a3b8">&#x2014;</tspan><tspan fill="#475569">  Gesture Recognition  (MediaPipe · OpenCV)</tspan>
-      </text>
+      <text x="495" y="421" font-family="'Courier New',monospace" font-size="11"><tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#059669">  contact.github   </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#475569">  github.com/AKASH1922</tspan></text>
+      <text x="495" y="437" font-family="'Courier New',monospace" font-size="11"><tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#059669">  contact.mail     </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#475569">  amanthesillent@gmail.com</tspan></text>
+      <text x="495" y="453" font-family="'Courier New',monospace" font-size="11"><tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#059669">  project[0]       </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#0f172a">  GuruTutor AI  </tspan><tspan fill="#94a3b8">&#x2014;</tspan><tspan fill="#475569">  RAG Tutoring (FastAPI Pinecone Llama-3)</tspan></text>
+      <text x="495" y="469" font-family="'Courier New',monospace" font-size="11"><tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#059669">  project[1]       </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#0f172a">  Face Recognition  </tspan><tspan fill="#94a3b8">&#x2014;</tspan><tspan fill="#475569">  Attendance (OpenCV Firebase)</tspan></text>
+      <text x="495" y="485" font-family="'Courier New',monospace" font-size="11"><tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#059669">  project[2]       </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#0f172a">  Apollo Music  </tspan><tspan fill="#94a3b8">&#x2014;</tspan><tspan fill="#475569">  Mobile Streaming (React Native AWS)</tspan></text>
+      <text x="495" y="501" font-family="'Courier New',monospace" font-size="11"><tspan fill="#2563eb">&#x2502;</tspan><tspan fill="#059669">  project[3]       </tspan><tspan fill="#94a3b8">:</tspan><tspan fill="#0f172a">  Teach-AIR  </tspan><tspan fill="#94a3b8">&#x2014;</tspan><tspan fill="#475569">  Gesture Recognition (MediaPipe)</tspan></text>
 
-      <!-- Close box -->
       <text x="482" y="516" font-family="'Courier New',monospace" font-size="10" fill="#2563eb" opacity="0.5">&#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;</text>
 
-      <!-- SOCIAL BUTTONS -->
       <rect x="482" y="528" width="78" height="24" rx="12" fill="rgba(15,23,42,0.05)" stroke="rgba(15,23,42,0.15)" stroke-width="0.8"/>
       <text x="521" y="544" font-family="'Courier New',monospace" font-size="9" fill="#0f172a" text-anchor="middle">&#x2B24; GitHub</text>
-
       <rect x="568" y="528" width="84" height="24" rx="12" fill="rgba(15,23,42,0.05)" stroke="rgba(15,23,42,0.15)" stroke-width="0.8"/>
       <text x="610" y="544" font-family="'Courier New',monospace" font-size="9" fill="#0891b2" text-anchor="middle">&#x2B24; LinkedIn</text>
-
       <rect x="660" y="528" width="72" height="24" rx="12" fill="rgba(15,23,42,0.05)" stroke="rgba(15,23,42,0.15)" stroke-width="0.8"/>
       <text x="696" y="544" font-family="'Courier New',monospace" font-size="9" fill="#2563eb" text-anchor="middle">&#x2709; Email</text>
-
       <rect x="744" y="528" width="128" height="24" rx="12" fill="rgba(16,185,129,0.08)" stroke="rgba(16,185,129,0.45)" stroke-width="0.9">
         <animate attributeName="stroke-opacity" values="0.45;0.85;0.45" dur="2s" repeatCount="indefinite"/>
       </rect>
@@ -334,16 +290,12 @@
       </circle>
       <text x="840" y="544" font-family="'Courier New',monospace" font-size="9" fill="#059669" text-anchor="middle">Open to Opportunities</text>
 
-      <!-- Bottom prompt -->
       <text x="482" y="570" font-family="'Courier New',monospace" font-size="9" fill="#94a3b8">
-        <tspan fill="#2563eb">akash@dev</tspan><tspan>:</tspan><tspan fill="#0891b2">~/portfolio</tspan><tspan fill="#0f172a">$ </tspan>
-        <tspan fill="#475569">&#x2588;</tspan>
+        <tspan fill="#2563eb">akash@dev</tspan><tspan>:</tspan><tspan fill="#0891b2">~/portfolio</tspan><tspan fill="#0f172a">$ </tspan><tspan fill="#475569">&#x2588;</tspan>
         <animate attributeName="opacity" values="1;0.3;1" dur="1.2s" repeatCount="indefinite"/>
       </text>
     </g>
 
-    <!-- OUTER BORDER -->
     <rect width="1180" height="610" rx="18" fill="none" stroke="url(#l-border)" stroke-width="1.5"/>
-
   </g>
 </svg>
